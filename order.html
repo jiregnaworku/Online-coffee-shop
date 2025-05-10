@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Coffee</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column; /* Change to column to stack logo and form */
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .logo {
+            margin-bottom: 20px; /* Space between logo and form */
+        }
+        .logo img {
+            width: 100px; /* Adjust logo size */
+            height: auto;
+        }
+        .order-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .order-form h2 {
+            text-align: center;
+            color: #6b4f4f;
+        }
+        .order-form input, .order-form select, .order-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .order-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #6b4f4f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .order-form button:hover {
+            background-color: #5a3e3e;
+        }
+        .order-form button:active {
+            cursor: url('https://example.com/custom-cursor.png'), auto; /* Replace with your cursor image */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo Section -->
+    <div class="logo">
+        <a href="index.html"> <!-- Link to home page -->
+            <img src="C:\Users\user\Desktop\jiross\Website Projects\Coffe website jiro\img/logo3.jpg" alt="Home"> <!-- Logo Image -->
+        </a>
+    </div>
+
+    <!-- Order Form Section -->
+    <div class="order-form">
+        <h2>Order Coffee</h2>
+        <form id="coffeeOrderForm">
+            <input type="text" id="name" placeholder="Your Name" required />
+            <input type="email" id="email" placeholder="Your Email" required />
+            <select id="coffeeType" required>
+                <option value="" disabled selected>Select Coffee Type</option>
+                <option value="Ethiopian Sidamo">Ethiopian Sidamo</option>
+                <option value="Yirgacheffe">Yirgacheffe</option>
+                <option value="Harrar">Harrar</option>
+                <option value="Wollega">Wollega</option>
+                <option value="Spiced Coffee">Spiced Coffee</option>
+            </select>
+            <input type="number" id="quantity" placeholder="Quantity" min="1" required />
+            <textarea id="specialRequests" placeholder="Special Requests (optional)"></textarea>
+           <a href="index.html"> <button type="submit">Order Now</button></a>
+        </form>
+    </div>
+    <footer>
+      <p class="copyright">
+        &copy; All Rights Reserved. 2025. JIro Coffee <a href="index.html">JIRO COFFEE</a>
+      </p>
+    </footer>
+    <script>
+        document.getElementById('coffeeOrderForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const coffeeType = document.getElementById('coffeeType').value;
+            const quantity = document.getElementById('quantity').value;
+            const specialRequests = document.getElementById('specialRequests').value;
+
+            // Simulate sending the order
+            console.log(`Order Details:
+                Name: ${name}
+                Email: ${email}
+                Coffee Type: ${coffeeType}
+                Quantity: ${quantity}
+                Special Requests: ${specialRequests}
+            `);
+
+            // asitti JJawwan keenya gara serverii kenyaatti akka seenaniif code kan bira itti fufnee barreessina
+        });
+    </script>
+</body>
+</html>
